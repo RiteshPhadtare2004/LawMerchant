@@ -1,0 +1,33 @@
+.navbar{
+    background-color: rgba(123, 120, 125, 0.132) !important; 
+    border-radius: 1rem;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between !important;
+    height: 8vh;
+    
+}
+.h-list ul li{
+    display: flex !important;
+    flex-direction: row;
+}
+.about{
+        background-image: url(../static/images/1.svg);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center !important;
+    width: 60%;
+    background-color: rgba(123, 120, 125, 0.132) !important; 
+    padding: 2rem;
+    border-radius: 3rem;
+}

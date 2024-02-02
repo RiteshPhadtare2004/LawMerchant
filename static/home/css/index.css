@@ -1,0 +1,81 @@
+.home{
+    background-image: url(../static/images/1.svg);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.navbar{
+    background-color: rgba(123, 120, 125, 0.132) !important; 
+    border-radius: 1rem;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between !important;
+    height: 8vh;
+    
+}
+.h-list ul li{
+    display: flex !important;
+    flex-direction: row;
+}
+.footer{
+    
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+
+}
+.m-footer{
+    background: rgb(184, 197, 224);
+}
+p{
+    padding: 0%;
+    margin: 0%;
+}
+.butn{
+    background-color: rgb(236, 95, 85);
+    color: aliceblue;
+    border-radius: 10px;
+}
+.butn:hover{
+    background-color: black;
+}
+.f-right form input{
+    height: 30px;
+}
+.l-details{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.list-items {
+    gap: 1rem;
+}
+
+.list-items ol li{
+    background: palevioletred;
+    margin: 13px;
+    padding: 2px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+.news{
+    background-color: rgba(123, 120, 125, 0.132);
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+.l-logos{
+    display: flex;
+    align-items: center;
+    background-color: aquamarine;
+}
