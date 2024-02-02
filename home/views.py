@@ -7,15 +7,15 @@ def home(request):
     return render(request, 'index.html')
 
 def about(request):
-    return HttpResponse("about")
+    return render(request, 'about.html')
 
 
 def contact(request):
-    return HttpResponse("contact")
+    return render(request, 'contact.html')
 
 def state(request):
-    return HttpResponse("state")
+    return render(request, 'verify.html')
 
 
 def central(request):
-    return HttpResponse("cental")
+    return render(request, 'verify.html')
