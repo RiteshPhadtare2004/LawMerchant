@@ -14,7 +14,7 @@
     flex-direction: row;
 }
 .about{
-        background-image: url(../static/images/1.svg);
+        background-image: url('/static/home/images/1.svg');
         height: 100%;
         display: flex;
         align-items: center;
