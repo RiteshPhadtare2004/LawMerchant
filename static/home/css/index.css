@@ -46,8 +46,33 @@ p{
 .butn:hover{
     background-color: black;
 }
+.f-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
 .f-right form input{
-    height: 30px;
+    height: 40px;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+.f-right form input:hover{
+    box-shadow: 1px 1px 2px 1px rgb(236, 95, 85);
+}
+.f-left ul a li{
+    color: black;
+    text-decoration: none;
+}
+
+.f-left ul{
+    text-decoration: none;
+    list-style: none;
+}
+.f-left ul a{ 
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
 }
 .l-details{
     display: flex;
@@ -80,4 +105,10 @@ p{
     align-items: center;
     background-color: rgb(127, 225, 255);
     border-radius: 2rem;
+}
+.f-middle{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
 }
