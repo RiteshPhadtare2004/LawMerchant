@@ -1,152 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% load static %}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="{% static 'home/css/verify.css' %}" rel="stylesheet">
-    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link href="{% static 'home/css/verify.css' %}" rel="stylesheet" />
+
     <title>Law Merchant</title>
-    
-</head>
-<body>
-
+  </head>
+  <body>
     <section class="header">
-        <div class="container ">
-           
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="nav container-fluid">
-                    <div>
-                        <img src="{% static 'home/images/logo.png' %}" height="40px">  
-                        <a class="navbar-brand" href="#">Law Merchant</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                </div>
-                  <div class="collapse navbar-collapse h-list" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        <a class="nav-link active" aria-current="page" href="/about">About Us</a>
-                        <a class="nav-link active" aria-current="page" href="/contact">Contact Us</a>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="nav container-fluid">
+            <div>
+              <img src="{% static 'home/images/logo.png' %}" height="40px" />
+              <a class="navbar-brand" href="#">Law Merchant</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div
+              class="collapse navbar-collapse h-list"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/"
+                    >Home</a
+                  >
+                  <a class="nav-link active" aria-current="page" href="/about"
+                    >About Us</a
+                  >
+                  <a class="nav-link active" aria-current="page" href="/contact"
+                    >Contact Us</a
+                  >
 
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Central/State
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/central">Central</a></li>
-                            <li><a class="dropdown-item" href="/state">State</a></li>
-                        </ul>
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Central/State
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="/central">Central</a>
+                    </li>
+                    <li><a class="dropdown-item" href="/state">State</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
 
-                      </li>
+        <div class="h-search">
+          <div class="h-left">
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="butn btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
 
-                    </ul>
-                    
-                  </div>
-                </div>
-              </nav>
-              
-              <div class="h-search">
-                <div class="h-left">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class=" butn btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                </div>
-                    
-                  <!-- <li class="nav-item dropdown"> -->
-                    <div class="drops">
-                        <div class="drop1">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Sort By
-                                </a>
-                                <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                        </div>
-                        
-                        <div class="drop1">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Filter
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div>
+          <!-- <li class="nav-item dropdown"> -->
+          <div class="drops">
+            <div class="drop1">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Sort By
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
 
-                    </div> 
-                  <!-- </li> -->
-              </div>
-              <div class="compliances">
-                <div >
-                    <h2 align="center">
-                        Compliances
-                    </h2>
-                </div>
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">CheckBox</th>
-                        <th scope="col">XYZ</th>
-                        
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"><input type="checkbox"></th>
-                        <td>Mark</td>
-                        
-                      </tr>
-                      <tr>
-                        <th scope="row"><input type="checkbox"></th>
-                        <td>Mark</td>
-                        
-                      </tr>
-                      <tr>
-                        <th scope="row"><input type="checkbox"></th>
-                        <td>Mark</td>
-                        
-                      </tr>
-                      <tr>
-                        <th scope="row"><input type="checkbox"></th>
-                        <td>Mark</td>
-                        
-                      </tr>
-                      <tr>
-                        <th scope="row"><input type="checkbox"></th>
-                        <td>Mark</td>
-                        
-                      </tr>
-                      <tr>
-                        <th scope="row"><input type="checkbox"></th>
-                        <td>Mark</td>
-                        
-                      </tr>
-                    </tbody>
-                  </table>
-              </div>
-
-
-              <div class="graph">
-                <h2 align="center">
-                    Graph
-                </h2>
-              </div>
+            <div class="drop1">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Filter
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- </li> -->
+        </div>
+        <div class="compliances">
+          <div>
+            <h2 align="center">Compliances</h2>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">CheckBox</th>
+                <th scope="col">XYZ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><input type="checkbox" /></th>
+                <td>Rule1</td>
+              </tr>
+              <tr>
+                <th scope="row"><input type="checkbox" /></th>
+                <td>Rule2</td>
+              </tr>
+              <tr>
+                <th scope="row"><input type="checkbox" /></th>
+                <td>Rule3</td>
+              </tr>
+              <tr>
+                <th scope="row"><input type="checkbox" /></th>
+                <td>Rule4</td>
+              </tr>
+              <tr>
+                <th scope="row"><input type="checkbox" /></th>
+                <td>Rule5</td>
+              </tr>
+              <tr>
+                <th scope="row"><input type="checkbox" /></th>
+                <td>Rule6</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-    </section>
-    <section class="footer">
-      <div>
-
+        <div class="graph">
+          <h2 align="center">Graph</h2>
+          <canvas id="lineGraph"></canvas>
+        </div>
       </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+    <section class="footer">
+      <div></div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the canvas element
+        const canvas = document.getElementById("lineGraph");
+        const ctx = canvas.getContext("2d");
+    
+        // Initial data for the line graph
+        const initialData = {
+          labels: ["Rule1", "Rule2", "Rule3", "Rule4", "Rule5", "Rule6"],
+          datasets: [
+            {
+              label: "Success Rate",
+              borderColor: "rgb(75, 192, 192)",
+              data: [0, 0, 0, 0, 0, 0],
+            },
+          ],
+        };
+    
+        // Create the line graph
+        const lineGraph = new Chart(ctx, {
+          type: "line",
+          data: initialData,
+        });
+    
+        // Handle checkbox changes
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(function (checkbox, index) {
+          checkbox.addEventListener("change", function () {
+            // Update the dataset based on checkbox changes
+            const increment = checkbox.checked ? 0.1 : -0.1;
+    
+            // Update the success rate for the clicked checkbox
+            initialData.datasets[0].data[index] += increment;
+    
+            // Ensure success rate stays within bounds [0, 1]
+            initialData.datasets[0].data[index] = Math.max(
+              0,
+              Math.min(1, initialData.datasets[0].data[index])
+            );
+    
+            // Update the line graph
+            lineGraph.update();
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
