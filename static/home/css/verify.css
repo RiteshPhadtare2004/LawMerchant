@@ -86,9 +86,19 @@
     gap: 2rem;
 }
 .graph{
-    height: 50vh;
+    
     background-color: rgba(123, 120, 125, 0.132); 
     padding: 4rem; 
     margin-top: 54px;
     border-radius: 3rem;
+}
+#lineGraph{
+    height: 50% !important;
+    width:50%;
+}
+.chart-container{
+    height: 80% !important;
+}
+.graph hello canvas{
+    height: 100px;
 }

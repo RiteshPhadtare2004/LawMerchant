@@ -1,0 +1,158 @@
+.navbar{
+    background-color: rgba(123, 120, 125, 0.132) !important; 
+    border-radius: 1rem;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between !important;
+    height: 8vh;
+    
+}
+.h-list ul li{
+    display: flex !important;
+    flex-direction: row;
+}
+.footer{
+    
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+
+}
+.m-footer{
+    background: rgb(184, 197, 224);
+}
+p{
+    padding: 0%;
+    margin: 0%;
+}
+.butn{
+    background-color: rgb(236, 95, 85);
+    color: aliceblue;
+    border-radius: 10px;
+}
+.butn:hover{
+    background-color: black;
+}
+.f-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.f-right form input{
+    height: 40px;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+.f-right form input:hover{
+    box-shadow: 1px 1px 2px 1px rgb(236, 95, 85);
+}
+.f-left ul a li{
+    color: black;
+    text-decoration: none;
+}
+
+.f-left ul{
+    text-decoration: none;
+    list-style: none;
+}
+.f-left ul a{ 
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
+}
+.l-details{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.list-items {
+    gap: 1rem;
+}
+
+.list-items ol li{
+    background: palevioletred;
+    margin: 13px;
+    padding: 13px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+.news{
+    background-color: rgba(123, 120, 125, 0.132);
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+.l-logos{
+    display: flex;
+    align-items: center;
+    background-color: rgb(127, 225, 255);
+    border-radius: 2rem;
+}
+.f-middle{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.srch{
+    width: 80%;
+    padding: 40px;
+}
+.central-cnt form input{
+    height: 4rem;
+
+}
+.central-cnt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.maindiv{
+    background-color: rgba(123, 120, 125, 0.132);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+.divl{
+    background-color: rgba(123, 120, 125, 0.132);
+    border: 1px solid black;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+}
+.divr{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 70%;
+}
+.maindiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.heh{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding: 3rem;
+}
+.nn{
+    height: 3rem;
+    width: 9rem;
+}
+.products{
+    background-color: rgba(123, 120, 125, 0.132);
+    border: 1px solid black;
+    width: 100%;
+}
