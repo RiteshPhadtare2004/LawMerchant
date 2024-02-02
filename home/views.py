@@ -18,4 +18,4 @@ def state(request):
 
 
 def central(request):
-    return render(request, 'verify.html')
+    return render(request, 'central.html')
