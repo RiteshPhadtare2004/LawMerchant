@@ -170,9 +170,19 @@
           </table>
         </div>
 
+        <!-- ... (your existing code) ... -->
+
         <div class="graph">
-          <h2 align="center">Graph</h2>
-          <canvas id="lineGraph"></canvas>
+          <h2 align="center">Graphs</h2>
+          <div class="chart-container">
+            <canvas id="lineGraph"></canvas>
+          </div>
+          <div class="chart-container">
+            <canvas id="barGraph"></canvas>
+          </div>
+          <div class="chart-container">
+            <canvas id="pieChart"></canvas>
+          </div>
         </div>
       </div>
     </section>
@@ -187,12 +197,17 @@
     ></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Get the canvas element
-        const canvas = document.getElementById("lineGraph");
-        const ctx = canvas.getContext("2d");
-    
+        // Get the canvas elements
+        const lineCanvas = document.getElementById("lineGraph");
+        const barCanvas = document.getElementById("barGraph");
+        const pieCanvas = document.getElementById("pieChart");
+
+        const lineCtx = lineCanvas.getContext("2d");
+        const barCtx = barCanvas.getContext("2d");
+        const pieCtx = pieCanvas.getContext("2d");
+
         // Initial data for the line graph
-        const initialData = {
+        const lineData = {
           labels: ["Rule1", "Rule2", "Rule3", "Rule4", "Rule5", "Rule6"],
           datasets: [
             {
@@ -202,31 +217,101 @@
             },
           ],
         };
-    
+
+        // Initial data for the bar graph
+        const barData = {
+          labels: ["Rule1", "Rule2", "Rule3", "Rule4", "Rule5", "Rule6"],
+          datasets: [
+            {
+              label: "Bar Chart Data",
+              backgroundColor: "rgb(255, 99, 132)",
+              data: [0, 0, 0, 0, 0, 0],
+            },
+          ],
+        };
+
+        // Initial data for the pie chart
+        const pieData = {
+          labels: ["Rule1", "Rule2", "Rule3", "Rule4", "Rule5", "Rule6"],
+          datasets: [
+            {
+              label: "Pie Chart Data",
+              backgroundColor: [
+                "red",
+                "blue",
+                "green",
+                "yellow",
+                "purple",
+                "orange",
+              ],
+              data: [0, 0, 0, 0, 0, 0],
+            },
+          ],
+        };
+
         // Create the line graph
-        const lineGraph = new Chart(ctx, {
+        const lineGraph = new Chart(lineCtx, {
           type: "line",
-          data: initialData,
+          data: lineData,
         });
-    
-        // Handle checkbox changes
-        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(function (checkbox, index) {
+
+        // Create the bar graph
+        const barGraph = new Chart(barCtx, {
+          type: "bar",
+          data: barData,
+        });
+
+        // Create the pie chart
+        const pieChart = new Chart(pieCtx, {
+          type: "pie",
+          data: pieData,
+        });
+
+        // Handle checkbox changes for the line graph
+        const lineCheckboxes = document.querySelectorAll(
+          'input[type="checkbox"]'
+        );
+        lineCheckboxes.forEach(function (checkbox, index) {
           checkbox.addEventListener("change", function () {
-            // Update the dataset based on checkbox changes
             const increment = checkbox.checked ? 0.1 : -0.1;
-    
-            // Update the success rate for the clicked checkbox
-            initialData.datasets[0].data[index] += increment;
-    
-            // Ensure success rate stays within bounds [0, 1]
-            initialData.datasets[0].data[index] = Math.max(
+            lineData.datasets[0].data[index] += increment;
+            lineData.datasets[0].data[index] = Math.max(
               0,
-              Math.min(1, initialData.datasets[0].data[index])
+              Math.min(1, lineData.datasets[0].data[index])
             );
-    
-            // Update the line graph
             lineGraph.update();
+          });
+        });
+
+        // Handle checkbox changes for the bar graph
+        const barCheckboxes = document.querySelectorAll(
+          'input[type="checkbox"]'
+        );
+        barCheckboxes.forEach(function (checkbox, index) {
+          checkbox.addEventListener("change", function () {
+            const increment = checkbox.checked ? 1 : -1;
+            barData.datasets[0].data[index] += increment;
+            barData.datasets[0].data[index] = Math.max(
+              0,
+              barData.datasets[0].data[index]
+            );
+            barGraph.update();
+          });
+        });
+
+        // Handle checkbox changes for the pie chart
+        const pieCheckboxes = document.querySelectorAll(
+          'input[type="checkbox"]'
+        );
+        pieCheckboxes.forEach(function (checkbox, index) {
+          checkbox.addEventListener("change", function () {
+            const increment = checkbox.checked ? 1 : -1;
+            pieData.datasets[0].data[index] += increment;
+            pieData.datasets[0].data[index] = Math.max(
+              0,
+              pieData.datasets[0].data[index]
+            );
+            pieChart.update();
           });
         });
       });
