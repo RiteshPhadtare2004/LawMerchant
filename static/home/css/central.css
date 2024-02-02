@@ -154,5 +154,7 @@ p{
 .products{
     background-color: rgba(123, 120, 125, 0.132);
     border: 1px solid black;
-    width: 100%;
+    width: 30%;
+    margin: 3px;
+    padding: 3px;
 }
