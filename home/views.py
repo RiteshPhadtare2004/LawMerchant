@@ -14,8 +14,11 @@ def contact(request):
     return render(request, 'contact.html')
 
 def state(request):
-    return render(request, 'verify.html')
+    return render(request, 'central.html')
 
 
 def central(request):
     return render(request, 'central.html')
+
+def verify(request):
+    return render(request, 'verify.html')
