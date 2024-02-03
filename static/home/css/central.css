@@ -129,6 +129,9 @@ p{
     flex-direction: column;
     border-radius: 0.5rem;
 }
+.divl ul{
+    text-decoration: none;
+}
 .divr{
     display: flex;
     flex-wrap: wrap;
@@ -158,3 +161,62 @@ p{
     margin: 3px;
     padding: 3px;
 }
+.ul li{
+    list-style: none;
+}
+
+.product-card {
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Drop shadow */
+    padding: 20px; /* Padding inside the card */
+    width: 25%; /* Card width */
+    margin: 20px; /* Margin around the card */
+    text-align: center; /* Center-align text */
+}
+
+.product-title {
+    font-size: 20px; /* Larger font size for title */
+    margin-bottom: 10px; /* Spacing below title */
+}
+
+.product-category {
+    font-style: italic; /* Italic style for category */
+    color: #888; /* Gray color for category */
+}
+
+.filters {
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Rounded corners */
+    padding: 20px; /* Padding inside the container */
+    width: 25%;
+}
+
+.filters h2 {
+    font-size: 24px; /* Larger font size for heading */
+    margin-bottom: 10px; /* Spacing below heading */
+    text-align: center;
+}
+
+.filter-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.filter-list li {
+    margin-bottom: 10px; /* Spacing between each filter */
+}
+
+.filter-list li label {
+    margin-left: 5px; /* Spacing between checkbox and label */
+    font-size: 16px; /* Font size for labels */
+    color: #333; /* Text color */
+}
+
+.filter-list li input[type="checkbox"] {
+    margin-right: 5px; /* Spacing between checkboxes */
+}
+

@@ -1,161 +1,137 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% load static %}
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link href="{% static 'home/css/central.css' %}" rel="stylesheet" />
 
-    <title>Central</title>
-  </head>
-  <body>
-    <section class="contact">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="nav container-fluid">
-            <div>
-              <img src="{% static 'home/images/logo.png' %}" height="40px" />
-              <a class="navbar-brand" href="/">Law Merchant</a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-            <div
-              class="collapse navbar-collapse h-list"
-              id="navbarSupportedContent"
-            >
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/"
-                    >Home</a
-                  >
-                  <a class="nav-link active" aria-current="page" href="/about"
-                    >About Us</a
-                  >
-                  <a class="nav-link active" aria-current="page" href="/contact"
-                    >Contact Us</a
-                  >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'home/css/central.css' %}">
+</head>
 
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Laws
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="/central">Central</a>
-                    </li>
-                    <li><a class="dropdown-item" href="/state">State</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-        <div class="central-cnt container">
-            <form class="d-flex srch" role="search">
-                <input class="form-control me-2" type="search" placeholder="What you want to get" aria-label="Search">
-                <button class="butn btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
-        <div class="maindiv container">
-            <div class="divl">
-                <h2>Filters</h2>
-                <ul>
-                    <li><input type="checkbox">Grocery</li>
-                    <li><input type="checkbox">Electronics</li>
-                    <li><input type="checkbox">Fashion</li>
-                    <li><input type="checkbox">Agriculture</li>
-                    <li><input type="checkbox">Others</li>
+<body>
+  <!-- Your remaining HTML content here -->
+
+
+  <section class="contact">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img src="{% static 'home/images/logo.png' %}" height="40px" alt="Logo">
+            Law Merchant
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Laws
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/central">Central</a></li>
+                  <li><a class="dropdown-item" href="/state">State</a></li>
                 </ul>
-            </div>
-            <div class="divr">
-                <div class="products">
-                    <h4>Refined Oil</h4>
-                    <p>Grocery</p>
-                </div>
-                <div class="products">
-                    <h4>Television</h4>
-                    <p>Electronics</p>
-                </div>
-                <div class="products">
-                    <h4>Salt</h4>
-                    <p>Grocery</p>
-                </div>
-                <div class="products">
-                    <h4>Oats</h4>
-                    <p>Grocery</p>
-                </div>
-                <div class="products">
-                    <h4>Watches</h4>
-                    <p>Electronics</p>
-                </div>
-                <div class="products">
-                    <h4>Vegetable</h4>
-                    <p>Grocery</p>
-                </div>
-                <div class="products">
-                    <h4>Laptop</h4>
-                    <p>Electrinics</p>
-                </div>
-            </div>
-        </div>
-        <div class="heh">
-            <a href="/verify"><button class="butn nn">Check</button></a>
-        </div>
-      
-
-
-    </section>    
-    <section class="m-footer">
-        <div class="footer">
-          <div class="f-left">
-            <ul>
-              <a href="/"><li>Home</li></a>
-              <a href="/about"><li>About Us</li></a>
-              <a href="/central"><li>Central/state</li></a>
-              <a href="/contact"><li>Contact Us</li></a>
+              </li>
             </ul>
           </div>
-          <div class="f-middle">
-            <img src="{% static 'home/images/logo.png' %}" height="120px" />
-            <img src="{% static 'home/images/fssailogo.png' %}" height="80px" />
-          </div>
-          <div class="f-right">
-            <form>
-              <input type="gmail" placeholder="Your Email" />
-              <button class="butn btn btn-primary">Subscribe</button>
-            </form>
-          </div>
         </div>
-        <div>
-          <p align="center">All Rigths Reserved @LawMerchant</p>
+      </nav>
+    </div>
+    <div class="central-cnt container">
+      <form class="d-flex srch" role="search">
+        <input class="form-control me-2" type="search" placeholder="What you want to get" aria-label="Search">
+        <button class="butn btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+    <div class="maindiv container">
+      <div class="filters">
+        <h2>Filters</h2>
+        <ul class="filter-list">
+            <li><input type="checkbox" id="groceryCheckbox"><label for="groceryCheckbox">Grocery</label></li>
+            <li><input type="checkbox" id="electronicsCheckbox"><label for="electronicsCheckbox">Electronics</label></li>
+            <li><input type="checkbox" id="fashionCheckbox"><label for="fashionCheckbox">Fashion</label></li>
+            <li><input type="checkbox" id="agricultureCheckbox"><label for="agricultureCheckbox">Agriculture</label></li>
+            <li><input type="checkbox" id="othersCheckbox"><label for="othersCheckbox">Others</label></li>
+        </ul>
+    </div>
+    
+      <div class="divr">
+        <div class="product-card">
+          <h4 class="product-title">Refined Oil</h4>
+          <p class="product-category">Grocery</p>
         </div>
-      </section> 
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+        <div class="product-card">
+          <h4 class="product-title">Refined Oil</h4>
+          <p class="product-category">Grocery</p>
+        </div>
+        <div class="product-card">
+          <h4 class="product-title">Refined Oil</h4>
+          <p class="product-category">Grocery</p>
+        </div>
+        <div class="product-card">
+          <h4 class="product-title">Refined Oil</h4>
+          <p class="product-category">Grocery</p>
+        </div>
+        <div class="product-card">
+          <h4 class="product-title">Refined Oil</h4>
+          <p class="product-category">Grocery</p>
+        </div>
+        <div class="product-card">
+          <h4 class="product-title">Refined Oil</h4>
+          <p class="product-category">Grocery</p>
+        </div>
+      </div>
+    </div>
+    <div class="heh">
+      <a href="/verify"><button class="butn nn">Check</button></a>
+    </div>
+  </section>
+
+  <section class="m-footer">
+    <div class="footer">
+      <div class="f-left">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/central">Central/state</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="f-middle">
+        <img src="{% static 'home/images/logo.png' %}" height="120px" alt="Logo">
+        <img src="{% static 'home/images/fssailogo.png' %}" height="80px" alt="FSSAI Logo">
+      </div>
+      <div class="f-right">
+        <form>
+          <input type="email" placeholder="Your Email">
+          <button class="butn btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <p class="text-center">All Rights Reserved @LawMerchant</p>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
