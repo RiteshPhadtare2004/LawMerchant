@@ -13,28 +13,28 @@
     display: flex !important;
     flex-direction: row;
 }
-.about{
+/* .about{
         background-image: url('/static/home/images/1.svg');
-        height: 200vh;
+        
         display: flex;
-        align-items: center;
-        justify-content: center;
+       
         gap: 3rem;
 }
 .content{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center !important;
+   
     width: 60%;
     background-color: rgba(123, 120, 125, 0.132) !important; 
     padding: 2rem;
     border-radius: 3rem;
-    height: 200vh;
-}
+   
+} */
 .about{
+    background-color: rgba(123, 120, 125, 0.132) ;
+    padding: 2rem;
+    border-radius: 3rem;
     display: flex;
+    height: 100vh;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
